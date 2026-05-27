@@ -11,7 +11,9 @@ from langchain_community.vectorstores import Chroma
 from zhipuai_llm import ZhipuaiLLM
 from dotenv import find_dotenv, load_dotenv
 
-_ = load_dotenv(find_dotenv())
+dotenv_path = find_dotenv()
+print(f".evn文件路径：{dotenv_path}")
+_ = load_dotenv(dotenv_path)
 api_key = os.environ["ZHIPUAI_API_KEY"]
 
 def get_retriever():
